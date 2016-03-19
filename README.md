@@ -4,7 +4,7 @@ Build configuration used for my [GoDaddy Cloud Server](https://cloud.godaddy.com
 
 ### Installing
 
-1. Create a server at cloud.godaddy.com (or using the API). Choose the 14.04.4 image.
+1. Create a server at cloud.godaddy.com (or using the API). Choose the Ubuntu 14.04.4 image.
 2. SSH to the host
 3. Run the following commands:
 
@@ -14,4 +14,4 @@ git clone https://github.com/clifton-io/cloud-config.git
 cd cloud-config/ && ./install.sh
 ```
 
-4. The script will print an SSH key. Add this public key to your GitHub profile
+After the install, the script will print an SSH key. Add this public key to your GitHub profile.
