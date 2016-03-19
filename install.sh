@@ -10,6 +10,7 @@ source ./scripts/process_keys.sh
 source ./scripts/install_ruby.sh
 source ./scripts/install_passenger.sh
 
+source ~/.profile
 echo "Finished automated installation at $(date)"
 
 cowsay "Please add the below public key to your GitHub profile:"
