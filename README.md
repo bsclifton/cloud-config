@@ -9,14 +9,14 @@ Build configuration used for my [GoDaddy Cloud Server](https://cloud.godaddy.com
 3. Run the following commands:
 
 ```sh
-sudo apt-get install -y git
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y git
 git clone https://github.com/clifton-io/cloud-config.git
 cd cloud-config/ && ./install.sh
 ```
 
 After the install, the script will print an SSH key to stdout (add this public key to your GitHub profile).
 
-When you're ready to use MySQL, you can reset the root password [using this procedure](https://help.ubuntu.com/community/MysqlPasswordReset).
+The MySQL root password is also printed; if you miss it, you can reset the root password [using this procedure](https://help.ubuntu.com/community/MysqlPasswordReset).
 
 ### About this configuration
 
