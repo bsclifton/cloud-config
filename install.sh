@@ -9,6 +9,7 @@ source ./scripts/install_dotfiles.sh
 source ./scripts/process_keys.sh
 source ./scripts/install_ruby.sh
 source ./scripts/install_passenger.sh
+source ./scripts/install_configs.sh
 
 source ~/.profile
 echo "Finished automated installation at $(date)"

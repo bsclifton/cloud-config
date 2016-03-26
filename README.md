@@ -30,4 +30,7 @@ sshd_config is updated to remove root login and to disallow login w/ password. T
 
 This install will also pull down [my personal dotfiles](https://github.com/bsclifton/dotfiles/) in the user's home directory.
 
-Configuration files (nginx, etc) are not currently installed by this script (yet).
+Configuration files (nginx, etc) are now installed for clifton.io, blog.clifton.io.
+* nginx config created using [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+* SSL config tested using [Qualys SSL Labs](https://www.ssllabs.com/ssltest/analyze.html) (both sites score an A)
+* SSL certificate/key must be manually installed to `/srv/`
