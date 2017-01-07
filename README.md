@@ -1,6 +1,8 @@
 ## cloud-config
 
-Build configuration used for my [GoDaddy Cloud Server](https://cloud.godaddy.com). Configuration is installed on top of [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/) (Trusty Tahr).
+Build configuration used for my [GoDaddy Cloud Server](https://cloud.godaddy.com/).
+
+Configuration is installed on top of [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/) (Trusty Tahr).
 
 ### Installing
 
@@ -10,7 +12,7 @@ Build configuration used for my [GoDaddy Cloud Server](https://cloud.godaddy.com
 
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y git
-git clone https://github.com/clifton-io/cloud-config.git
+git clone https://github.com/bsclifton/cloud-config.git
 cd cloud-config/ && ./install.sh
 ```
 
