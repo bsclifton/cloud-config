@@ -2,6 +2,15 @@
 
 Build configuration used for my Digital Ocean Droplet (migration in progress from the now EOLed [GoDaddy Cloud Server](https://cloud.godaddy.com/) product).
 
+This server hosts a few of my websites:
+- [blog.clifton.io](https://github.com/bsclifton/blog.clifton.io)
+- [clifton.io](https://github.com/bsclifton/clifton.io)
+- [mb.clifton.io](https://github.com/bsclifton/mb.clifton.io)
+
+And two websites for the [Morgopolis](https://github.com/morgopolis) organization:
+- [mal-game.com](https://github.com/morgopolis/mal-game.com)
+- [morgopolis.com](https://github.com/morgopolis/morgopolis.com)
+
 Configuration is installed on top of [Ubuntu 16.04.3 LTS](http://releases.ubuntu.com/16.04/) (Xenial Xerus).
 
 ### Installing
@@ -25,7 +34,7 @@ The MySQL root password is also printed; if you miss it, you can reset the root 
 
 This config uses nginx with:
 - [PHP using FastCGI Process Manager](https://www.howtoforge.com/installing-nginx-with-php5-fpm-and-mysql-on-ubuntu-14.04-lts-lemp)
-- [Ruby using Passenger](https://www.phusionpassenger.com/library/install/nginx/install/oss/trusty/)
+- [Ruby using Passenger](https://www.phusionpassenger.com/library/install/nginx/install/oss/xenial/)
 
 Ruby is setup using [rbenv](https://github.com/rbenv/rbenv) and (as of 2017/09/03) is set to 2.4.1.
 
