@@ -11,8 +11,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # Install latest stable Ruby version
 source ~/.profile
-rbenv install 2.3.0
-rbenv global 2.3.0
+RUBY_CONFIGURE_OPTS=--disable-install-doc rbenv install 2.4.1
+rbenv global 2.4.1
 
 # Specific ruby gems
 gem install rails bundler

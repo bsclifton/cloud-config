@@ -18,8 +18,10 @@ sudo apt-get upgrade -y
 RANDOM_PW=$(openssl rand -base64 32)
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $RANDOM_PW"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $RANDOM_PW"
-sudo apt-get install -y cowsay curl build-essential libssl-dev libreadline-dev zlib1g-dev nodejs mysql-server mysql-client php5-fpm php5-mysql php5-curl php5-gd zip unzip
+sudo apt install -y gcc cowsay curl build-essential libssl-dev libreadline-dev zlib1g-dev nodejs mysql-server mysql-client zip unzip
+sudo apt install -y php7.0-fpm php7.0-mysql php7.0-curl php7.0-gd
 
 # Remove unnecessary packages
-sudo apt-get remove -y vim-tiny ppp pppconfig pppoeconf nano
-dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
+sudo apt remove -y vim-tiny ppp pppconfig pppoeconf nano
+sudo apt autoremove
+
