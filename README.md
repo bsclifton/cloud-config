@@ -16,8 +16,8 @@ Configuration is installed on top of [Ubuntu 16.04.3 LTS](http://releases.ubuntu
 ### Installing
 
 1. Create a new droplet on Digital Ocean. Choose the Ubuntu 16.04.3 image.
-2. Create a new user (TODO: document this)
-3. SSH to the host as that new user
+2. SSH to the host.
+3. [Create a new user with sudo access](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) and switch to this new user.
 4. Run the following commands:
 
 ```sh
