@@ -1,13 +1,11 @@
 #!/bin/bash
 
 # Install rbenv - https://github.com/rbenv/rbenv
-if [ ! -f ~/.rbenv/bin/rbenv ]; then
-  pushd .
-  rm -rf ~/.rbenv
-  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-  cd ~/.rbenv && src/configure && make -C src
-  popd
-fi
+pushd .
+rm -rf ~/.rbenv/
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+popd
 
 # Install ruby-build - https://github.com/rbenv/ruby-build#readme
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
