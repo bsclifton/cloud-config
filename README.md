@@ -18,8 +18,12 @@ Configuration is installed on top of [Ubuntu 16.04.3 LTS](http://releases.ubuntu
 1. Create a new droplet on Digital Ocean. Choose the Ubuntu 16.04.3 image.
 2. SSH to the host.
 3. [Create a new user with sudo access](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) and switch to this new user.
+```
+adduser brian
+usermod -aG sudo brian
+su - brian
+```
 4. Run the following commands:
-
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt install -y git
 git clone https://github.com/bsclifton/cloud-config.git

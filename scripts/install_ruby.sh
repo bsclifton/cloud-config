@@ -12,6 +12,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # Install latest stable Ruby version
 source ~/.bashrc
+# TODO: this currently has a problem on install which requires manually
+# logging in and re-running `source ~/bashrc`
 RUBY_CONFIGURE_OPTS=--disable-install-doc rbenv install 2.4.1
 rbenv global 2.4.1
 
