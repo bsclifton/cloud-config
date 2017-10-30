@@ -13,6 +13,8 @@ And two websites for the [Morgopolis](https://github.com/morgopolis) organizatio
 
 Configuration is installed on top of [Ubuntu 16.04.3 LTS](http://releases.ubuntu.com/16.04/) (Xenial Xerus).
 
+This repo does not cover mail setup. For that, you [can follow this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04).
+
 ### Installing
 
 1. Create a new droplet on Digital Ocean. Choose the Ubuntu 16.04.3 image.
