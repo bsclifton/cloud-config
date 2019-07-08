@@ -18,5 +18,5 @@ RUBY_CONFIGURE_OPTS=--disable-install-doc rbenv install 2.4.1
 rbenv global 2.4.1
 
 # Specific ruby gems
-gem install rails bundler
+gem install rails bundler jekyll
 rbenv rehash
