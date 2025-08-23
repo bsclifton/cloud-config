@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ~/.ssh/
+mkdir -p ~/.ssh/
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 pushd .

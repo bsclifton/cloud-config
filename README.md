@@ -1,9 +1,8 @@
 ## cloud-config
 
-Build configuration used for my Digital Ocean Droplet (migration in progress from the now EOLed [GoDaddy Cloud Server](https://cloud.godaddy.com/) product).
+Build configuration used for my Digital Ocean Droplet.
 
 This server hosts a few of my websites:
-- [blog.clifton.io](https://github.com/bsclifton/blog.clifton.io)
 - [clifton.io](https://github.com/bsclifton/clifton.io)
 - [mb.clifton.io](https://github.com/bsclifton/mb.clifton.io)
 
@@ -11,14 +10,14 @@ And two websites for the [Morgopolis](https://github.com/morgopolis) organizatio
 - [mal-game.com](https://github.com/morgopolis/mal-game.com)
 - [morgopolis.com](https://github.com/morgopolis/morgopolis.com)
 
-Configuration is installed on top of [Ubuntu 16.04.3 LTS](http://releases.ubuntu.com/16.04/) (Xenial Xerus).
+Configuration is installed on top of [Ubuntu 24.04.3 LTS](https://releases.ubuntu.com/noble/) (Noble Numbat).
 
 This repo does not cover mail setup. For that, you [can follow this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04).
 
 ### Installing
 
-1. Create a new droplet on Digital Ocean. Choose the Ubuntu 16.04.3 image.
-2. SSH to the host.
+1. Create a new droplet on Digital Ocean. Choose the `Ubuntu 24.04 (LTS) x64` image.
+2. SSH to the host (`ssh root@ip-address-here`).
 3. [Create a new user with sudo access](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) and switch to this new user.
 ```
 adduser brian
@@ -34,15 +33,9 @@ cd cloud-config/ && ./install.sh
 
 After the install, the script will print an SSH key to stdout (add this public key to your GitHub profile).
 
-The MySQL root password is also printed; if you miss it, you can reset the root password [using this procedure](https://help.ubuntu.com/community/MysqlPasswordReset).
-
 ### About this configuration
 
-This config uses nginx with:
-- [PHP using FastCGI Process Manager](https://www.howtoforge.com/installing-nginx-with-php5-fpm-and-mysql-on-ubuntu-14.04-lts-lemp)
-- [Ruby using Passenger](https://www.phusionpassenger.com/library/install/nginx/install/oss/xenial/)
-
-Ruby is setup using [rbenv](https://github.com/rbenv/rbenv) and (as of 2017/09/03) is set to 2.4.1.
+Ruby is setup using [rbenv](https://github.com/rbenv/rbenv) and (as of 2025/08/23) is set to 3.4.5.
 
 sshd_config is updated to remove root login and to disallow login w/ password. To obtain SSH access, you can put your public key under ./keys and it will be installed to the authorized_keys.
 
