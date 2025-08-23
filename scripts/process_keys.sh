@@ -4,7 +4,7 @@
 ssh-keygen -t rsa -b 4096 -C "brian@clifton.me" -N "" -f ~/.ssh/id_rsa
 
 # Authorized users
-cat ../keys/* > ~/.ssh/authorized_keys
+cat ./keys/* > ~/.ssh/authorized_keys
 
 # Disallow password auth & PAM for sshd
 sudo sed -i 's|[#]*PermitRootLogin yes|PermitRootLogin no|g' /etc/ssh/sshd_config
