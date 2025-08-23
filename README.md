@@ -20,7 +20,8 @@ This repo does not cover mail setup. For that, you [can follow this article](htt
 2. SSH to the host (`ssh root@ip-address-here`).
 3. [Create a new user with sudo access](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) and switch to this new user.
 ```
-adduser brian
+adduser --gecos GECOS brian
+# prompted for password
 usermod -aG sudo brian
 su - brian
 ```
@@ -31,11 +32,17 @@ git clone https://github.com/bsclifton/cloud-config.git
 cd cloud-config/ && ./install.sh
 ```
 
+If the install runs into `rbenv: command not found`, you can re-run `./scripts/install_ruby.sh`.
+
+Similarly, if the install has `nvm: command not found` you can re-run `./scripts/install_nodejs.sh`.
+
 After the install, the script will print an SSH key to stdout (add this public key to your GitHub profile).
 
 ### About this configuration
 
 Ruby is setup using [rbenv](https://github.com/rbenv/rbenv) and (as of 2025/08/23) is set to 3.4.5.
+
+NVM is installed for nodejs and the latest stable version is used.
 
 sshd_config is updated to remove root login and to disallow login w/ password. To obtain SSH access, you can put your public key under ./keys and it will be installed to the authorized_keys.
 
