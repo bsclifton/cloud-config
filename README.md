@@ -70,3 +70,8 @@ There are two scripts which can be ran:
 - `~/scripts/maintenance.sh`: this script will run `apt update` and `apt upgrade`. This should be ran regularly.
 - `~/scripts/upgrade.sh`: this script will run `apt dist-upgrade`. This should only be ran manually.
 
+SSL certificates are via letsencrypt (certbot):
+- new certicate can be requested via `sudo certbot -d yourdomain.tld --nginx`
+- renewal can be done via `sudo certbot certonly --nginx` or `sudo certbot --nginx`
+
+
