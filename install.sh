@@ -14,6 +14,8 @@ source ./scripts/install_configs.sh
 source ~/.profile
 echo "Finished automated installation at $(date)"
 
+cowsay "The root password for MySQL is $RANDOM_PW"
+
 cowsay "Please add the below public key to your GitHub profile:"
 echo "#-------------------------------------------------------------"
 cat ~/.ssh/id_rsa.pub

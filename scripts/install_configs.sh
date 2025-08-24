@@ -1,11 +1,15 @@
 #!/bin/bash
 
 # Make backups
+sudo cp /etc/php/7.0/fpm/php.ini /etc/php/7.0/fpm/php.ini.bak
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+sudo cp /etc/nginx/snippets/fastcgi-php.conf /etc/nginx/snippets/fastcgi-php.conf.bak
 
 # Copy configs
+sudo cp ./etc/php5/fpm/php.ini /etc/php/7.0/fpm/php.ini
 sudo cp ./etc/nginx/conf.d/*.conf /etc/nginx/conf.d/
 sudo cp ./etc/nginx/sites-available/default /etc/nginx/sites-available/default
+sudo cp ./etc/nginx/snippets/fastcgi-php.conf /etc/nginx/snippets/fastcgi-php.conf
 
 # files used by SSL configurations
 sudo mkdir -p /srv/
@@ -20,5 +24,6 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 #sudo certbot --nginx
 
 # Restart services
+sudo service php7.0-fpm restart
 sudo service nginx restart
 
