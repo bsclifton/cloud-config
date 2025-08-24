@@ -20,8 +20,11 @@ sudo cp ./srv/gd_bundle-g2-g1.crt /srv/gd_bundle-g2-g1.crt
 sudo apt install snapd
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
-#sudo certbot certonly --nginx
-#sudo certbot --nginx
+
+# you should be able to renew when needed via:
+# sudo certbot certonly --nginx
+# or
+# sudo certbot --nginx
 
 # Restart services
 sudo service php8.3-fpm restart
