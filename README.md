@@ -53,6 +53,15 @@ Configuration files (nginx, etc) are now installed for [clifton.io](https://gith
 - SSL config tested using [Qualys SSL Labs](https://www.ssllabs.com/ssltest/analyze.html) (both sites score an A)
 - SSL certificate/key must be manually installed to `/srv/`
 
+### Restoring the database
+When moving from an old instance, MySQL data can be imported when running as root.
+`mysqldump -u root -p --all-databases > /root/mysql_$(date +"%Y%m%d_%H%M%S%N").sql`
+
+Restoring on the new instance looks like this:
+`mysql -u root -p -f < mysql_20250824_082011356980463.sql`
+
+NOTE: you may need to run `mysqld --upgrade=FORCE` to fix things after restoring.
+
 ### Staying up to date
 
 Once everything is in place and the server is up and running, the next step is to consider maintenance.
