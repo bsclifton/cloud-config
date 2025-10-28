@@ -6,10 +6,6 @@ This server hosts a few of my websites:
 - [clifton.io](https://github.com/bsclifton/clifton.io)
 - [mb.clifton.io](https://github.com/bsclifton/mb.clifton.io)
 
-And two websites for the [Morgopolis](https://github.com/morgopolis) organization:
-- [mal-game.com](https://github.com/morgopolis/mal-game.com)
-- [morgopolis.com](https://github.com/morgopolis/morgopolis.com)
-
 Configuration is installed on top of [Ubuntu 24.04.3 LTS](https://releases.ubuntu.com/noble/) (Noble Numbat).
 
 This repo does not cover mail setup. For that, you [can follow this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04).
@@ -52,15 +48,6 @@ Configuration files (nginx, etc) are now installed for [clifton.io](https://gith
 - nginx config created using [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 - SSL config tested using [Qualys SSL Labs](https://www.ssllabs.com/ssltest/analyze.html) (both sites score an A)
 - SSL certificate/key must be manually installed to `/srv/`
-
-### Restoring the database
-When moving from an old instance, MySQL data can be imported when running as root.
-`mysqldump -u root -p --all-databases > /root/mysql_$(date +"%Y%m%d_%H%M%S%N").sql`
-
-Restoring on the new instance looks like this:
-`mysql -u root -p -f < mysql_20250824_082011356980463.sql`
-
-NOTE: you may need to run `mysqld --upgrade=FORCE` to fix things after restoring.
 
 ### Staying up to date
 
